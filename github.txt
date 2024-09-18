@@ -1,0 +1,15 @@
+def pig_latin(word):
+    if word[0] in 'aeiou':
+        return word + 'yay'
+    else:
+        return word[1:] + word[0] + 'ay'
+
+def count_words_in_pig_latin(text):
+    words = text.split()
+    pig_latin_words = [pig_latin(word) for word in words]
+    return len(pig_latin_words)
+
+# Example usage
+text = "hello world this is an example"
+word_count = count_words_in_pig_latin(text)
+print(f"Word count in Pig Latin: {word_count}")
